@@ -8,7 +8,7 @@ module.exports = async ({ getNamedAccounts, deployments }) => {
     const { deployer } = await getNamedAccounts();
     
     log("----------------------------");
-    const BlendNft = await deploy("MultiAsset", {
+    const blocklance = await deploy("Blocklance", {
         from: deployer,
         to: null,
         args: [],
@@ -22,4 +22,4 @@ module.exports = async ({ getNamedAccounts, deployments }) => {
     log("----------------------------");
 };
 
-module.exports.tags = ["all", "multi"];
+module.exports.tags = ["all", "BlendNft"];

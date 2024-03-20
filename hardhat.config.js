@@ -51,7 +51,7 @@ module.exports = {
         apiKey: process.env.ETHERSCAN_API || "",
         customChains: [
             {
-                
+
             }
         ]
     },
@@ -74,7 +74,7 @@ module.exports = {
                 settings: {
                     optimizer: _optimizer,
                 },
-            }
+            },
         ],
     },
 
@@ -85,23 +85,29 @@ module.exports = {
         sepolia: {
             url: `https://eth-sepolia.g.alchemy.com/v2/${process.env.ALCHEMY_API}`,
             accounts: [`0x${process.env.privateKey}`],
-            blockConfirmations: 3
+            blockConfirmations: 3,
         },
         avalanche: {
             url: `https://api.avax-test.network/ext/bc/C/rpc`,
             accounts: [`0x${process.env.privateKey}`],
-            blockConfirmations: 3
+            blockConfirmations: 3,
         },
         spiderChain: {
-            url: 'https://node.botanixlabs.dev/',
+            url: "https://node.botanixlabs.dev/",
             chainId: 3636,
             accounts: [`0x${process.env.privateKey}`],
-            blockConfirmations: 3
+            blockConfirmations: 3,
+        },
+        neon: {
+            url: `https://devnet.neonevm.org`,
+            chainId: 245022926,
+            accounts: [`0x${process.env.privateKey}`],
+            blockConfirmations: 3,
         },
         goerli: {
             url: `https://eth-goerli.alchemyapi.io/v2/${process.env.ALCHEMY_API}`,
             accounts: [`0x${process.env.privateKey}`],
-            blockConfirmations: 5
+            blockConfirmations: 5,
         },
         arbgoerli: {
             url: `https://arb-goerli.g.alchemy.com/v2/${process.env.ALCHEMY_API}`,
